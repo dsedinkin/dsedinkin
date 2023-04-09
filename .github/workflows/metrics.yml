@@ -1,13 +1,17 @@
 name: Metrics
 on:
-  schedule: [{ cron: "7 * * * *" }]
+  # Schedule daily updates
+  schedule: [{cron: "0 0 * * *"}]
+  # (optional) Run workflow manually
   workflow_dispatch:
-  push:
+  # (optional) Run workflow when pushing on master/main
+  push: {branches: ["master", "main"]}
 jobs:
-  build:
+  github-metrics:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-    - name: Metrics embed
-      uses: lowlighter/metrics@v3.32
-      with:
+      - uses: lowlighter/metrics@latest
+        with:
           token: ${{ secrets.METRICS_TOKEN }}
