@@ -15,6 +15,5 @@ jobs:
       - uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
-          base: community, repositories
-          repositories: 1000
-          repositories_affiliations: ""
+          base: header, repositories
+          plugin_lines: yes
