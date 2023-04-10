@@ -16,4 +16,4 @@ jobs:
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           base: header, activity, community, repositories, metadata
-          repositories_affiliations: owner, collaborator, organization_member
+          repositories_affiliations: ""
