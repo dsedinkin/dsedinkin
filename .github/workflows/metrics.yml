@@ -17,4 +17,3 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           base: community, repositories
           repositories_affiliations: ""
-          plugin_lines: yes
